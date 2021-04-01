@@ -16,7 +16,7 @@
 		CC594EE9260E2C690056EBB0 /* RJWeakTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC594EE8260E2C690056EBB0 /* RJWeakTimeTests.m */; };
 		CC594EF4260E2C690056EBB0 /* RJWeakTimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC594EF3260E2C690056EBB0 /* RJWeakTimeUITests.m */; };
 		CC594F0C260E2EA70056EBB0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC594F0B260E2EA70056EBB0 /* SecondViewController.m */; };
-		CC594F13260E2F680056EBB0 /* RJWeakTime.m in Sources */ = {isa = PBXBuildFile; fileRef = CC594F12260E2F680056EBB0 /* RJWeakTime.m */; };
+		CC85F4E626162CD00099160A /* RJWeakTime.m in Sources */ = {isa = PBXBuildFile; fileRef = CC85F4E526162CD00099160A /* RJWeakTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		CC594EF5260E2C690056EBB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC594F0A260E2EA70056EBB0 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		CC594F0B260E2EA70056EBB0 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		CC594F11260E2F680056EBB0 /* RJWeakTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJWeakTime.h; sourceTree = "<group>"; };
-		CC594F12260E2F680056EBB0 /* RJWeakTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJWeakTime.m; sourceTree = "<group>"; };
+		CC85F4E426162CD00099160A /* RJWeakTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJWeakTime.h; sourceTree = "<group>"; };
+		CC85F4E526162CD00099160A /* RJWeakTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJWeakTime.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		CC594ECB260E2C660056EBB0 /* RJWeakTime */ = {
 			isa = PBXGroup;
 			children = (
-				CC594F10260E2F3D0056EBB0 /* Claasses */,
+				CC85F4E326162CD00099160A /* Classes */,
 				CC594ECC260E2C660056EBB0 /* AppDelegate.h */,
 				CC594ECD260E2C660056EBB0 /* AppDelegate.m */,
 				CC594ED2260E2C660056EBB0 /* ViewController.h */,
@@ -141,13 +141,13 @@
 			path = RJWeakTimeUITests;
 			sourceTree = "<group>";
 		};
-		CC594F10260E2F3D0056EBB0 /* Claasses */ = {
+		CC85F4E326162CD00099160A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CC594F11260E2F680056EBB0 /* RJWeakTime.h */,
-				CC594F12260E2F680056EBB0 /* RJWeakTime.m */,
+				CC85F4E426162CD00099160A /* RJWeakTime.h */,
+				CC85F4E526162CD00099160A /* RJWeakTime.m */,
 			);
-			path = Claasses;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC85F4E626162CD00099160A /* RJWeakTime.m in Sources */,
 				CC594F0C260E2EA70056EBB0 /* SecondViewController.m in Sources */,
-				CC594F13260E2F680056EBB0 /* RJWeakTime.m in Sources */,
 				CC594ED4260E2C660056EBB0 /* ViewController.m in Sources */,
 				CC594ECE260E2C660056EBB0 /* AppDelegate.m in Sources */,
 				CC594EDF260E2C680056EBB0 /* main.m in Sources */,

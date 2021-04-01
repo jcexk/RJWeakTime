@@ -4,8 +4,8 @@
 
 #import "RJWeakTime.h"
 
-#pragma mark - ----- NoCycleTarget -----
-@interface NoCycleTarget : NSProxy
+#pragma mark - ----- RJCycleTarget -----
+@interface RJCycleTarget : NSProxy
 
 ///利用消息转发机制，转发到 receive 实现
 @property(nonatomic, weak) id receiver;
@@ -19,10 +19,10 @@
 + (instancetype)alloc __attribute__((unavailable("call proxyForReceiver instead")));
 @end
 
-@implementation NoCycleTarget
+@implementation RJCycleTarget
 
 + (id)proxyForReceiver:(id)receiver {
-    NoCycleTarget *instance = [NoCycleTarget alloc];
+    RJCycleTarget *instance = [RJCycleTarget alloc];
     instance.receiver = receiver;
     return instance;
 }
@@ -46,7 +46,7 @@
 
 @property (nonatomic, strong) NSTimer *timer;
 ///target
-@property(nonatomic, strong) NoCycleTarget *target;
+@property(nonatomic, strong) RJCycleTarget *target;
 @end
 
 @implementation RJWeakTime
@@ -58,20 +58,20 @@
 }
 + (RJWeakTime *)timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo {
     RJWeakTime *mediator = [[RJWeakTime alloc]init];
-    mediator.target = [NoCycleTarget proxyForReceiver:aTarget];
+    mediator.target = [RJCycleTarget proxyForReceiver:aTarget];
     mediator.timer = [NSTimer timerWithTimeInterval:ti target:mediator.target selector:aSelector userInfo:userInfo repeats:yesOrNo];
     return mediator;
 }
 + (RJWeakTime *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo {
     RJWeakTime *mediator = [[RJWeakTime alloc]init];
-    mediator.target = [NoCycleTarget proxyForReceiver:aTarget];
+    mediator.target = [RJCycleTarget proxyForReceiver:aTarget];
     mediator.timer = [NSTimer scheduledTimerWithTimeInterval:ti target:mediator.target selector:aSelector userInfo:userInfo repeats:yesOrNo];
     return mediator;
 }
 - (instancetype)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti target:(id)t selector:(SEL)s userInfo:(nullable id)ui repeats:(BOOL)rep {
     self = [super init];
     if (self) {
-        self.target = [NoCycleTarget proxyForReceiver:t];
+        self.target = [RJCycleTarget proxyForReceiver:t];
         self.timer = [[NSTimer alloc]initWithFireDate:date interval:ti target:self.target selector:s userInfo:ui repeats:rep];
     }
     return self;
