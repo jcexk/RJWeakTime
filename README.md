@@ -1,0 +1,2 @@
+# RJWeakTime
+RJWeakTimer是一款可以自动释放的NSTimer，让您无需担心NSTimer内存泄露问题
