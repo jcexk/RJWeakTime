@@ -7,6 +7,6 @@ Pod::Spec.new do |spec|
   spec.author       = { "jcexk" => "2542700177@qq.com" }
   spec.ios.deployment_target = "9.0"
   spec.source       = { :git => "https://github.com/jcexk/RJWeakTime.git", :tag => "#{spec.version}" }
-  spec.source_files  = "RJWeakTime/Classes/**/*.{h,m}"
+  spec.source_files  = "RJWeakTime/Classes/*.{h,m}"
   spec.requires_arc = true
 end
